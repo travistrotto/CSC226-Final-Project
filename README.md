@@ -6,7 +6,7 @@ Last Updated: 05-07-2020
 
 <h2> TO RUN:</h2>
 <ul>
-  <li>Download latest version of all files, listed above.<li>
+  <li>Download latest version of all files, listed above.</li>
   <li>Place index.html, Cart2.php and style.css into the 'K-Daysi Commerce Source Code' folder.</li>
   <li>Run from localhost.</li>
 </ul>
