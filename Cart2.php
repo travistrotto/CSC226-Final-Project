@@ -26,7 +26,7 @@
                 $_SESSION["cart"][$count] = $item_array;
                 echo '<script>window.location="Cart2.php"</script>';
             }else{
-                echo '<script>alert("Product is already Added to Cart")</script>';
+                echo '<script>alert("That product is already in your cart, remove it to change or edit the quantity")</script>';
                 echo '<script>window.location="Cart2.php"</script>';
             }
         }else{
@@ -45,7 +45,7 @@
             foreach ($_SESSION["cart"] as $keys => $value){
                 if ($value["product_id"] == $_GET["id"]){
                     unset($_SESSION["cart"][$keys]);
-                    echo '<script>alert("Product has been Removed...!")</script>';
+                    echo '<script>alert("Product removed from cart successfully")</script>';
                     echo '<script>window.location="Cart2.php"</script>';
                 }
             }
@@ -60,7 +60,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping Cart</title>
+    <title>K-Daysi Shopping Cart</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -83,14 +83,14 @@
         }
         .title2{
             text-align: center;
-            color: #66afe9;
-            background-color: #efefef;
+            color: white;
+            background-color: purple;
             padding: 2%;
         }
         h2{
             text-align: center;
-            color: #66afe9;
-            background-color: #efefef;
+            color: white;
+            background-color: purple;
             padding: 2%;
         }
         table th{
@@ -99,9 +99,13 @@
     </style>
 </head>
 <body>
+    
 
     <div class="container" style="width: 65%">
-        <h2>Shopping Cart</h2>
+        <img src="logo.jpg">
+        <h2>Available Products</h2>
+        <p style="text-align: center;"><strong>These are the products sold by K-Daysi.</strong></p>
+         <p style="text-align: center;">Each product you see listed below is in the K-Daysi database of available products. <br>The name, price and image of each product is passed from the database into the HTML and CSS you see here.</p>
         <?php
             $query = "SELECT * FROM product ORDER BY id ASC ";
             $result = mysqli_query($connect,$query);
@@ -132,7 +136,10 @@
         ?>
 
         <div style="clear: both"></div>
-        <h3 class="title2">Shopping Cart Details</h3>
+        <h3 class="title2">Your Shopping Cart</h3>
+        <p style="text-align: center;"><strong>These are the products listed in your shopping cart.</strong></p>
+         <p style="text-align: center;">Each product you see listed below is selected by you from the above products.<br>A PHP file keeps track of your "purchases" and lists the items and totals in the table below.</p>
+
         <div class="table-responsive">
             <table class="table table-bordered">
             <tr>
