@@ -2,7 +2,7 @@
 /*      CSC226 FINAL PROJECT, Prof. Minh Doan
  *      Spring 2020 
  *      
- *      SHOPPING CART USER INTERFACE
+ *      PRODUCTS PAGE
  *      @Author Travis Trotto, Michele,Esmond
  *      
  *      # ACCESS'S "Product_details" TABLE IN myphpadmin DATABASE
