@@ -6,6 +6,7 @@
  *      @Author Travis Trotto, Michele,Esmond
  *      
  *      # ACCESS'S "Product_details" TABLE IN myphpadmin DATABASE
+        Last updated 
  *
 */
     session_start();
@@ -99,10 +100,33 @@
     </style>
 </head>
 <body>
-    
+
 
     <div class="container" style="width: 65%">
-        <img src="logo.jpg">
+        <a href="Cart2.php"><img src="logo.jpg"></a>
+        <h6> Simple Shopping.</h6>
+
+            <div class="accounts">
+                <a href="login.html">
+                    <button>
+                        Login
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button>
+                        Sign up
+                    </button>
+                </a>
+            </div>
+            <div class="cartBtn">
+                <a href="Cart3.php">
+                    <button class="btn btn-success">
+                    Shopping Cart
+                    </button>
+                </a>
+            </div>
+            
+            
         <h2>Available Products</h2>
         <p style="text-align: center;"><strong>These are the products sold by K-Daysi.</strong></p>
          <p style="text-align: center;">Each product you see listed below is in the K-Daysi database of available products. <br>The name, price and image of each product is passed from the database into the HTML and CSS you see here.</p>
@@ -136,6 +160,9 @@
         ?>
 
         <div style="clear: both"></div>
+            <a href="Cart3.php"><p style="text-align: center;">Click here to view your Shopping Cart</p></a>
+    <!--
+    <div class="sCart">
         <h3 class="title2">Your Shopping Cart</h3>
         <p style="text-align: center;"><strong>These are the products listed in your shopping cart.</strong></p>
          <p style="text-align: center;">Each product you see listed below is selected by you from the above products.<br>A PHP file keeps track of your "purchases" and lists the items and totals in the table below.</p>
@@ -179,6 +206,8 @@
                 ?>
             </table>
         </div>
+    </div>
+-->
 
     </div>
 
